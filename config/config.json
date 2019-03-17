@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "val2407entin",
+    "database": "database_development_SSI",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "val2407entin",
+    "database": "database_test_SSI",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "val2407entin",
+    "database": "database_production_SSI",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
