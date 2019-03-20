@@ -1,60 +1,50 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Sites', {
+    return queryInterface.createTable('SsiModeles', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idClient: {
-        allowNull: false,
+      idBrand: {
         type: Sequelize.INTEGER,
-        references :{
-          model : 'Clients',
-          key: 'id'
-
+        allowNull: false,
+        references : {
+          model : 'SsiMarques',
+          key : 'id'
         }
       },
-      address: {
-        allowNull: false,
+      refName: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      listModules: {
         type: Sequelize.STRING
       },
-      city: {
-        allowNull: false,
+      listDm: {
         type: Sequelize.STRING
       },
-      zipCode: {
-        allowNull: false,
+      listDo: {
         type: Sequelize.STRING
       },
-      name: {
-        allowNull: false,
+      listDts: {
         type: Sequelize.STRING
       },
-      category: {
-        allowNull: false,
+      listDtv: {
         type: Sequelize.STRING
       },
-      type: {
-        allowNull: false,
+      listDmc: {
         type: Sequelize.STRING
       },
-      respName: {
+      listDf: {
         type: Sequelize.STRING
       },
-      respFonc: {
+      listDpa: {
         type: Sequelize.STRING
       },
-      respTel: {
-        type: Sequelize.STRING
-      },
-      respEmail: {
-        type: Sequelize.STRING
-      },
-      nContrat: {
-        allowNull: false,
+      listDl: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -68,6 +58,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Sites');
+    return queryInterface.dropTable('SsiModeles');
   }
 };

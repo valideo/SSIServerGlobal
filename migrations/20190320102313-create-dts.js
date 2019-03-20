@@ -1,32 +1,24 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Techniciens', {
+    return queryInterface.createTable('Dts', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      email: {
+      idBrand: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.STRING
+        references : {
+          model : 'SsiMarques',
+          key : 'id'
+        }
       },
-      username: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      password: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      nom: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      prenom: {
-        allowNull: false,
-        type: Sequelize.STRING
+      refName: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -39,6 +31,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Techniciens');
+    return queryInterface.dropTable('Dts');
   }
 };
