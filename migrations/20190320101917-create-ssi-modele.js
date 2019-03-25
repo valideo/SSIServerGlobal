@@ -14,7 +14,7 @@ module.exports = {
         references : {
           model : 'SsiMarques',
           key : 'id'
-        }
+        },
       },
       refName: {
         type: Sequelize.STRING,

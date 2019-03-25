@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     models.Do.belongsTo(models.SsiMarque, {
       foreignKey: {
-        allowNull : false
+        //allowNull : false
       }
     });
   };
