@@ -151,7 +151,7 @@ module.exports = {
             modelSelected = models.Dtv;
   
       modelSelected.findOne({
-        attributes: ['idBrand', 'refName'],
+        attributes: ['id','idBrand', 'refName'],
         where: { id: idComponent }
       }).then(function(component) {
         if (component) {
